@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 import router from './api/api.js';
-app.use(router);
+app.use('/api/v1', router);
 
 app.use(notFound);
 
